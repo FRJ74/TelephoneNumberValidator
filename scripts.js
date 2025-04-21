@@ -9,6 +9,8 @@ check.addEventListener("click", () => {
     alert("Please provide a phone number")
   } else if (regex.test(input.value)) {
     results.innerText = `Valid US number: ${input.value}`
+  } else {
+    results.innerText = `Invalid US number: ${input.value}`
   }
 });
 
