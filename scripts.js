@@ -4,8 +4,11 @@ const clear = document.getElementById("clear-btn");
 const results = document.getElementById("result-div");
 
 check.addEventListener("click", () => {
+  const regex = /^(1\s?)?(\(\d{3}\)|\d{3})([\s-]?)\d{3}([\s-]?)\d{4}$/
   if(!input.value) {
     alert("Please provide a phone number")
+  } else if (regex.test(input.value)) {
+    results.innerText = `Valid US number: ${input.value}`
   }
 });
 
